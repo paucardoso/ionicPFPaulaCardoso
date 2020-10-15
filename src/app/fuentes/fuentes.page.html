@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar color = "success">
+    
+    <ion-title class = "colorFondo"><strong>Laboratorio de Plastinación UAP</strong></ion-title>       
+    <ion-title color = "danger">Sistema de Control de Vacío</ion-title>
+    
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+  <div class="contenedor">
+
+<ion-item>
+  <ion-text color="dark">
+    <h2>Fuente Principal</h2>
+  </ion-text>
+</ion-item>
+
+<ion-item>  
+    <ion-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg5P8XqSa4XH5VI7UsPAURj0L9HXmvi8tQo5l0lUMR8J6h4T10ceiz6kswq5WlWaH3nsuXj3s6&usqp=CAc"></ion-img>
+</ion-item>
+
+</div> 
+
+
+<div class="contenedor">
+  
+<ion-item>
+    <ion-text color="dark">
+      <h4 class="colorFondo">Estado:
+       <ion-button (click)="verEstadoB1()" expand="block" color = "success" shape = "round">
+          Ver Estado
+       </ion-button>
+      </h4>
+    </ion-text>
+</ion-item>
+
+<ion-item>
+  <ion-text color="dark">
+    <ion-button (click)="verUbicacion()" expand="block" color = "secondary" shape = "round">
+        Ver Ubicación de la Fuente
+    </ion-button>
+  </ion-text>
+</ion-item>
+
+</div>
+
+<ion-button (click)="modificarParametrosB1()" expand="block" color = "warning" shape = "round" [disabled] = "PumpCondition()">
+  Modificar Parámetros
+</ion-button>
+
+<div class="contenedor">
+
+  <ion-item>
+    <ion-text color="dark">
+      <h2>Fuente Auxiliar</h2>
+    </ion-text>
+  </ion-item>
+  
+  <ion-item> 
+    <ion-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSHJZbgUQmTS3wfAAXB49trdgRlwFYdkY54PA&usqp=CAU"></ion-img>
+  </ion-item>
+  
+  <ion-item>
+      <ion-text color="dark">
+        <h4 class="colorFondo">Estado: 
+          <ion-button (click)="verEstadoB2()" expand="block" color = "success" shape = "round">
+            Ver Estado
+          </ion-button>
+        </h4>
+      </ion-text>
+  </ion-item>
+
+  <ion-item>
+    <ion-text color="dark">
+      <ion-button (click)="verUbicacion()" expand="block" color = "secondary" shape = "round">
+          Ver Ubicación de la Fuente
+      </ion-button>
+    </ion-text>
+  </ion-item>
+  
+</div>
+
+  <ion-button (click)="modificarParametrosB2()" expand="block" color = "warning" shape = "round" [disabled] = "PumpAuxCondition()"> 
+    Modificar Parámetros
+  </ion-button>
+
+<ion-item>
+  <ion-button (click)="agregar()" expand="block" color = "danger">
+    Agregar Fuente
+  </ion-button>
+</ion-item>
+
+
+</ion-list>
+
+</ion-content>
+

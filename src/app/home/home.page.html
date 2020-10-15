@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar color="success">
+    <ion-title class ="colorFondo"><strong>Laboratorio de Plastinación UAP</strong></ion-title>      
+   
+    <ion-button (click)="PaginaWeb()" slot = "end" shape = "round">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+    <ion-icon name="mail-outline"></ion-icon> 
+    Problemas o Sugerencias?  
+    </ion-button>
+    
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">  
+
+  <p><strong><h1>BIENVENIDO A LA APP DEL SISTEMA DE CONTROL DE VACÍO</h1></strong></p>
+
+  <ion-img src="https://www.researchgate.net/profile/Nicolas_Ottone/publication/330141689/figure/fig2/AS:711344684793856@1546609197156/Laboratorio-de-Plastinacion-y-Tecnicas-Anatomicas-Universidad-de-La-Frontera-Temuco_Q640.jpg"></ion-img>
+  <div class="texto-encima"><strong><h2>A partir de esta aplicación usted podrá</h2></strong></div> 
+  <div class="texto-encima2"><strong><h2>conocer el estado actual de las fuentes de vacío</h2></strong></div>
+  <div class="texto-encima3"><strong><h2>y modificar sus parámetros de funcionamiento.</h2></strong></div>    
+  
+  <ion-item>
+    <ion-title>Por favor, identifíquese <ion-icon name="person-outline"></ion-icon></ion-title>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position = "floating">Código de Identificación Personal:
+      <ion-text color = "danger">*</ion-text>
+    </ion-label>  
+    <ion-input [(ngModel)] ="id" value = "111" type = "password"></ion-input>  
+  </ion-item>
+
+  <ion-button (click)="Aceptar()" expand="block" shape = "round">
+    Aceptar 
+  </ion-button>   
+
+  <ion-item>
+    <h8>© COPYRIGHT 2020 - Universidad Adventista del Plata - Dirección: 25 de Mayo 99, E3103 Libertador San Martín, Entre Ríos - Teléfono: 0343 491-8000</h8>  
+  </ion-item>
+
+</ion-content>
+

@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar color = "success">
+    
+    <ion-title class = "colorFondo"><strong>Laboratorio de Plastinación UAP</strong></ion-title>       
+    <ion-title color = "danger">Sistema de Control de Vacío</ion-title>       
+            
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/fuentes"></ion-back-button>
+      </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list>        
+      
+<ion-item>
+  <ion-text color="danger">
+    <h2>Fuente de vacío 1</h2>
+  </ion-text>
+</ion-item>
+
+<ion-item-divider color = "light">
+  <ion-label><h2><strong>
+    Depresión aplicada [mmHg]:
+    <ion-text color = "danger">*</ion-text>
+    <ion-item><ion-label><ion-input [(ngModel)] = "depresion" placeholder = "Ingrese valor: "></ion-input></ion-label></ion-item>
+  </strong></h2></ion-label>
+</ion-item-divider>
+
+<ion-item-divider color = "light">
+  <ion-label><h2><strong>
+    Hora de inicio de exposición:
+    <ion-text color = "danger">*</ion-text>
+    <ion-item><ion-label><ion-input [(ngModel)] = "hora"  placeholder = "Ingrese hora: "></ion-input></ion-label></ion-item>
+  </strong></h2></ion-label>
+</ion-item-divider>
+
+<ion-item-divider color = "light">
+  <ion-label><h2><strong>
+    Tiempo de encendido:
+    <ion-text color = "danger">*</ion-text>
+    <ion-item><ion-label><ion-input [(ngModel)] = "tiempo"  placeholder = "Ingrese tiempo en horas: "></ion-input></ion-label></ion-item>
+  </strong></h2></ion-label>
+</ion-item-divider>
+
+<ion-item-divider color = "light">
+  <ion-label><h2><strong>¿DESEA HABILITAR LA FUENTE?</strong></h2></ion-label>
+  <ion-text color = "danger">*</ion-text>
+  
+    <ion-item>
+      <ion-radio-group [(ngModel)]="activar"> 
+  
+    <ion-item>
+      <ion-label>Si</ion-label>
+      <ion-radio color="danger" slot="start" value="s"></ion-radio>
+    </ion-item>
+        
+    <ion-item>
+      <ion-label>No</ion-label>
+      <ion-radio color="primary" slot="start" value="n"></ion-radio>
+    </ion-item>
+        
+      </ion-radio-group>
+    </ion-item>
+
+</ion-item-divider>
+
+<ion-item-divider color = "light">
+  
+<ion-label><h2><strong>Marcar la opción que más se adecue a su situación (pueden ser ambas): </strong></h2></ion-label>
+<ion-text color = "danger">*</ion-text>
+
+<ion-list>
+ <ion-item *ngFor="let entry of form">
+   <ion-label>{{entry.val}}</ion-label>
+   <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+ </ion-item>
+</ion-list>
+
+</ion-item-divider>
+
+</ion-list>
+
+<ion-item>
+  <ion-button (click)="Guardar()" shape = "round" expand = "full" color = "warning">
+    <ion-icon slot = "end" name="save-outline"></ion-icon>
+    Guardar Datos
+  </ion-button>  
+</ion-item>
+
+</ion-content>
+
